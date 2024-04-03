@@ -24,13 +24,12 @@ export const TextInput = ({ titleHeader, onChange, inputValue }) => {
         name="message"
         maxLength="300"
         value={inputValue?.message || ""}
-        placeholder="
-        Please enter the message you want to send to the customer
-        "
+        placeholder="Please enter the message you wish to send to the customer."
         required
       />
       <HelpText id="message_text">
-        Limit of 300 characters, {inputValue?.message?.length || 0} characters used
+        Limit of 300 characters, {inputValue?.message?.length || 0} characters
+        used
       </HelpText>
     </>
   );
