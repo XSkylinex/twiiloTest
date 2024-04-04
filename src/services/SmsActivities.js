@@ -19,7 +19,7 @@ export const smsActivitiesFinishCall = async (flex) => {
     addListener("afterHangupCall", async (payload) => {
       const { from, to } = payload?.task?.attributes;
       if (!from || !to) return;
-      if (from && to) postMethod("/finishcall", { from, to });
+      postMethod("/finishcall", { from, to });
     });
   } catch (e) {
     console.error(e);
